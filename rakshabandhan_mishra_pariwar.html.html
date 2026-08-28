@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>शुभ रक्षाबंधन | मिश्रा परिवार का पावन उत्सव</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Great+Vibes&family=Rozha+One&family=Yatra+One&family=Poppins:wght@300;400;600;700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<style>
+  :root {
+    --gold: #f6c860;
+    --gold-glow: #ffd978;
+    --deep-maroon: #2b020a;
+    --royal-crimson: #630519;
+    --wine: #8e0e29;
+    --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    --gold-text: linear-gradient(45deg, #ffe57f, #ffd54f, #fff8e1, #ffb300);
+    --card-bg: rgba(43, 2, 10, 0.75);
+    --glass-border: rgba(246, 200, 96, 0.35);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background: radial-gradient(circle at 50% 15%, #520014 0%, #200007 55%, #0a0002 100%);
+    color: #fff6e5;
+    font-family: 'Poppins', 'Hind', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  #sparkle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .bg-mandala {
+    position: fixed;
+    width: 850px;
+    height: 850px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.045;
+    pointer-events: none;
+    z-index: 0;
+    animation: rotateMandala 140s linear infinite;
+  }
+  @keyframes rotateMandala {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  /* Audio Floating Button */
+  .music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--gold-gradient);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    color: #2b020a;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(246, 200, 96, 0.45);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+  .music-control:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 28px rgba(246, 200, 96, 0.65);
+  }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 30px 18px 90px 18px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Hero Section */
+  .hero-badge {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .tagline-pill {
+    display: inline-block;
+    padding: 7px 22px;
+    border-radius: 30px;
+    background: rgba(246, 200, 96, 0.12);
+    border: 1px solid rgba(246, 200, 96, 0.45);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fce8a6;
+    backdrop-filter: blur(10px);
+  }
+
+  .main-title {
+    font-family: 'Rozha One', 'Yatra One', serif;
+    font-size: clamp(2.4rem, 6.5vw, 4.4rem);
+    text-align: center;
+    background: var(--gold-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 30px rgba(246, 200, 96, 0.3);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .sub-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(1.6rem, 3.8vw, 2.5rem);
+    color: #fce8a6;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+
+  /* ------------------- ENVELOPE MODAL ------------------- */
+  #envelope-wrapper {
+    margin: 15px auto 45px auto;
+    max-width: 540px;
+    perspective: 1000px;
+  }
+  .envelope-card {
+    background: linear-gradient(145deg, #78091e, #47010f);
+    border: 2px solid #dfb04d;
+    border-radius: 20px;
+    padding: 38px 25px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 30px rgba(246, 200, 96, 0.25);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  }
+  .envelope-card:hover {
+    transform: translateY(-5px) scale(1.015);
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.85), 0 0 45px rgba(246, 200, 96, 0.45);
+  }
+  .seal-btn {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 16px auto;
+    background: radial-gradient(circle, #f9db7b, #c68a1f, #7a4f02);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5), inset 0 2px 4px rgba(255,255,255,0.6);
+    border: 2.5px solid #ffe89e;
+    animation: pulseSeal 2.2s infinite ease-in-out;
+  }
+  @keyframes pulseSeal {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(246, 200, 96, 0.4); }
+    50% { transform: scale(1.09); box-shadow: 0 0 38px rgba(246, 200, 96, 0.8); }
+  }
+  .envelope-msg {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff1c7;
+    margin-bottom: 6px;
+  }
+  .envelope-sub {
+    font-size: 0.88rem;
+    color: #e3b778;
+  }
+
+  /* Unlocked Envelope Letter */
+  #letter-content {
+    display: none;
+    background: linear-gradient(135deg, rgba(62, 4, 16, 0.96), rgba(26, 1, 6, 0.98));
+    border: 2px solid #e5b95c;
+    border-radius: 22px;
+    padding: 35px 28px;
+    margin: 25px 0 50px 0;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 40px rgba(229, 185, 92, 0.3);
+    backdrop-filter: blur(14px);
+    animation: flipDown 0.8s ease forwards;
+  }
+  @keyframes flipDown {
+    from { opacity: 0; transform: translateY(-30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* ------------------- 3D RAKHI EXPERIENCE ------------------- */
+  .section-title {
+    font-family: 'Rozha One', 'Yatra One', serif;
+    font-size: clamp(1.8rem, 4.2vw, 2.6rem);
+    text-align: center;
+    color: #f8d57b;
+    margin: 50px 0 15px 0;
+    position: relative;
+  }
+  .section-title::after {
+    content: "✦ ✦ ✦";
+    display: block;
+    font-size: 13px;
+    color: #dfb04d;
+    letter-spacing: 6px;
+    margin-top: 6px;
+  }
+
+  .rakhi-stage-card {
+    background: radial-gradient(circle at center, rgba(105, 5, 27, 0.72), rgba(30, 1, 7, 0.88));
+    border: 2px solid var(--glass-border);
+    border-radius: 26px;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  }
+
+  .rakhi-3d-wrapper {
+    width: 270px;
+    height: 270px;
+    margin: 10px auto 25px auto;
+    position: relative;
+    perspective: 800px;
+  }
+  .rakhi-centerpiece {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: gentleSway 6s ease-in-out infinite;
+  }
+  @keyframes gentleSway {
+    0%, 100% { transform: rotateY(-8deg) rotateX(4deg) scale(1); }
+    50% { transform: rotateY(8deg) rotateX(-4deg) scale(1.04); }
+  }
+  .rakhi-thread {
+    position: absolute;
+    top: 50%;
+    left: -130px;
+    right: -130px;
+    height: 8px;
+    background: repeating-linear-gradient(90deg, #d32f2f, #d32f2f 12px, #fbc02d 12px, #fbc02d 24px, #f57c00 24px, #f57c00 36px);
+    transform: translateY(-50%);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 1;
+  }
+  .rakhi-thread::before, .rakhi-thread::after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: radial-gradient(circle, #ffe082, #b8860b);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px #fbc02d;
+  }
+  .rakhi-thread::before { left: 40px; }
+  .rakhi-thread::after { right: 40px; }
+
+  .rakhi-svg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.7)) drop-shadow(0 0 20px rgba(246, 200, 96, 0.45));
+  }
+
+  .rakhi-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 15px;
+    z-index: 5;
+    position: relative;
+  }
+
+  .btn-festive {
+    background: var(--gold-gradient);
+    color: #38020b;
+    border: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(246, 200, 96, 0.35);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-festive:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 10px 30px rgba(246, 200, 96, 0.55);
+  }
+  .btn-festive:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .btn-outline {
+    background: rgba(246, 200, 96, 0.1);
+    color: #fde28e;
+    border: 1.5px solid #dfb04d;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+  }
+  .btn-outline:hover {
+    background: rgba(246, 200, 96, 0.25);
+    transform: translateY(-2px);
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(246, 200, 96, 0.3);
+  }
+
+  /* ------------------- DEDICATED FAMILY SECTIONS ------------------- */
+  .family-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+  }
+
+  .family-card {
+    background: linear-gradient(145deg, rgba(74, 3, 17, 0.88), rgba(35, 1, 8, 0.92));
+    border: 1.5px solid rgba(246, 200, 96, 0.3);
+    border-radius: 22px;
+    padding: 26px 22px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+    transition: all 0.35s ease;
+  }
+  .family-card:hover {
+    border-color: #f7cb68;
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(246, 200, 96, 0.28);
+  }
+  .family-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gold-gradient);
+  }
+  .family-avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    border: 2px solid #f6c860;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    background: radial-gradient(circle, #5e0517, #240107);
+    box-shadow: 0 4px 15px rgba(246, 200, 96, 0.3);
+  }
+  .family-name {
+    font-family: 'Rozha One', 'Yatra One', serif;
+    font-size: 1.45rem;
+    color: #ffd875;
+    margin-bottom: 4px;
+  }
+  .family-role {
+    font-size: 0.82rem;
+    color: #e2b97c;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .family-quote {
+    font-size: 0.92rem;
+    color: #ffeed1;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    min-height: 48px;
+  }
+
+  /* ------------------- INTERACTIVE PHOTO GALLERY ------------------- */
+  .gallery-header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: rgba(246, 200, 96, 0.08);
+    border: 1px solid rgba(246, 200, 96, 0.25);
+    padding: 16px 24px;
+    border-radius: 18px;
+    margin: 30px 0 25px 0;
+  }
+  .gallery-counter {
+    font-size: 1.08rem;
+    color: #ffe694;
+    font-weight: 600;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .polaroid-card {
+    perspective: 1000px;
+    height: 335px;
+    cursor: pointer;
+  }
+  .polaroid-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+  .polaroid-card.flipped .polaroid-inner {
+    transform: rotateY(180deg);
+  }
+
+  .polaroid-front, .polaroid-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  /* Front Mystery Card */
+  .polaroid-front {
+    background: linear-gradient(145deg, #5c0415, #2c010a);
+    border: 2px dashed #dfb04d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+  .polaroid-front .secret-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+    animation: bounceIcon 2.2s infinite ease-in-out;
+  }
+  @keyframes bounceIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .polaroid-front h4 {
+    color: #ffe082;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .polaroid-front p {
+    color: #d1a561;
+    font-size: 0.82rem;
+  }
+
+  /* Back: Revealed Real Photo */
+  .polaroid-back {
+    background: #ffffff;
+    color: #2b020a;
+    transform: rotateY(180deg);
+    padding: 12px 12px 18px 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.6);
+    border: 1px solid #ffd54f;
+  }
+  .photo-frame {
+    width: 100%;
+    height: 235px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #200007;
+    position: relative;
+    cursor: zoom-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform 0.5s ease;
+  }
+  .photo-frame:hover img {
+    transform: scale(1.08);
+  }
+  .photo-caption {
+    font-family: 'Hind', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #5c0717;
+  }
+  .photo-sub {
+    font-size: 0.75rem;
+    color: #7a5c2d;
+    font-weight: 500;
+  }
+
+  /* Image Modal / Fullscreen Viewer */
+  #image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 0, 2, 0.94);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+  }
+  #modal-img {
+    max-width: 94vw;
+    max-height: 88vh;
+    border-radius: 14px;
+    border: 3px solid #dfb04d;
+    box-shadow: 0 0 50px rgba(246, 200, 96, 0.5);
+    object-fit: contain;
+  }
+  .modal-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: var(--gold-gradient);
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #2b020a;
+  }
+
+  /* ------------------- BLESSING BOX ------------------- */
+  .blessing-box {
+    margin-top: 55px;
+    background: radial-gradient(circle at top, rgba(125, 10, 32, 0.88), rgba(30, 2, 7, 0.95));
+    border: 2px solid #e0b04a;
+    border-radius: 24px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.6), inset 0 0 25px rgba(246, 200, 96, 0.15);
+  }
+  .shayari-text {
+    font-family: 'Rozha One', 'Yatra One', serif;
+    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+    line-height: 1.8;
+    color: #fff2c4;
+    margin: 20px 0;
+    min-height: 90px;
+    transition: all 0.4s ease;
+  }
+
+  /* ------------------- SIGNATURE CARD ------------------- */
+  .signature-card {
+    margin-top: 60px;
+    text-align: center;
+    padding: 35px 20px;
+    background: rgba(246, 200, 96, 0.05);
+    border-radius: 22px;
+    border: 1px dashed rgba(246, 200, 96, 0.35);
+  }
+  .family-crest {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.9rem;
+    font-weight: 900;
+    background: var(--gold-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .diyas-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+  }
+  .diya-flame {
+    width: 14px;
+    height: 24px;
+    background: radial-gradient(ellipse at 50% 80%, #ffeb3b 0%, #ff9800 60%, transparent 90%);
+    border-radius: 50% 50% 20% 20%;
+    margin: 0 auto 2px auto;
+    filter: drop-shadow(0 0 8px #ffb300);
+    animation: flicker 1.4s infinite alternate ease-in-out;
+  }
+  @keyframes flicker {
+    0% { transform: scale(1) rotate(-2deg); opacity: 0.9; }
+    50% { transform: scale(1.15) rotate(2deg); opacity: 1; }
+    100% { transform: scale(0.95) rotate(-1deg); opacity: 0.85; }
+  }
+  .diya-base {
+    width: 38px;
+    height: 14px;
+    background: linear-gradient(180deg, #d35400, #78281f);
+    border-radius: 0 0 20px 20px;
+    border: 1px solid #f39c12;
+  }
+
+  /* Toast */
+  #toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--gold-gradient);
+    color: #2b020a;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+  }
+  #toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 20px 14px 70px 14px; }
+    .family-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .polaroid-card { height: 280px; }
+    .photo-frame { height: 180px; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="sparkle-canvas"></canvas>
+
+<!-- Background Mandala Svg -->
+<svg class="bg-mandala" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="none" stroke="#f6c860" stroke-width="0.5"/>
+  <circle cx="50" cy="50" r="35" fill="none" stroke="#f6c860" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <circle cx="50" cy="50" r="25" fill="none" stroke="#f6c860" stroke-width="0.5"/>
+  <polygon points="50,5 62,38 95,50 62,62 50,95 38,62 5,50 38,38" fill="none" stroke="#f6c860" stroke-width="0.6"/>
+  <polygon points="50,15 58,42 85,50 58,58 50,85 42,58 15,50 42,42" fill="none" stroke="#f6c860" stroke-width="0.4"/>
+</svg>
+
+<button class="music-control" onclick="toggleFestivalMusic()">
+  <span id="music-icon">🎵</span>
+  <span id="music-text">उत्सव धुन</span>
+</button>
+
+<!-- Fullscreen Modal for High-Res Photos -->
+<div id="image-modal" onclick="closeModal()">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <img id="modal-img" src="" alt="Enlarged Memory">
+</div>
+
+<div class="container">
+
+  <!-- Header & Pill -->
+  <div class="hero-badge">
+    <div class="tagline-pill">✦ प्रेम, स्नेह और अटूट विश्वास का पावन पर्व ✦</div>
+  </div>
+  
+  <h1 class="main-title">शुभ रक्षाबंधन</h1>
+  <p class="sub-title">मिश्रा परिवार का पावन उत्सव</p>
+
+  <!-- Step 1: Interactive Envelope -->
+  <div id="envelope-wrapper">
+    <div class="envelope-card" onclick="openEnvelope()">
+      <div class="seal-btn">💌</div>
+      <div class="envelope-msg">एक पावन शुभकामना पत्र आपके लिए...</div>
+      <div class="envelope-sub">लिफाफा खोलने के लिए स्पर्श करें (Click to Open) ✨</div>
+    </div>
+  </div>
+
+  <!-- Letter Content -->
+  <div id="letter-content">
+    <div style="text-align: center; margin-bottom: 15px;">
+      <span style="font-size: 32px;">🪔</span>
+    </div>
+    <p style="font-family: 'Rozha One', 'Yatra One', serif; font-size: 1.35rem; color: #ffe694; text-align: center; margin-bottom: 12px;">
+      "चंदन का टीका, रेशम का धागा... सावन की सुगंध और खुशियों की बहार!"
+    </p>
+    <p style="font-size: 1rem; line-height: 1.85; color: #ffeec7; text-align: center; margin-bottom: 22px;">
+      यह केवल एक धागा नहीं, बल्कि जीवन भर के साथ, सुरक्षा, आदर और अंतहीन स्नेह का संकल्प है। हमारे प्यारे <b>शुभम भाई</b>, प्यारी <b>आस्था</b>, और प्यारी <b>निकिता</b> के साथ पूरे <b>मिश्रा परिवार</b> की ओर से रक्षाबंधन के इस पावन पर्व की अनंत हार्दिक शुभकामनाएं! 🌸✨
+    </p>
+    <div style="text-align: center;">
+      <button class="btn-festive" onclick="celebrateBurst()">🎊 खुशियों की वर्षा करें (Celebrate)</button>
+    </div>
+  </div>
+
+  <!-- 3D Interactive Rakhi Showcase -->
+  <h2 class="section-title">दिव्य रक्षा सूत्र</h2>
+  <div class="rakhi-stage-card">
+    <div class="rakhi-3d-wrapper" id="rakhiCard" onmousemove="handle3dMove(event)" onmouseleave="reset3dCard()">
+      <div class="rakhi-centerpiece" id="rakhiPiece">
+        <div class="rakhi-thread"></div>
+        <!-- High-Detail Gold & Crimson Rakhi SVG -->
+        <svg class="rakhi-svg" viewBox="0 0 200 200">
+          <defs>
+            <radialGradient id="gemGold" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fff8e1"/>
+              <stop offset="40%" stop-color="#ffd54f"/>
+              <stop offset="85%" stop-color="#ff8f00"/>
+              <stop offset="100%" stop-color="#bf360c"/>
+            </radialGradient>
+            <radialGradient id="rubyCenter" cx="40%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#ff5252"/>
+              <stop offset="45%" stop-color="#d50000"/>
+              <stop offset="85%" stop-color="#880e4f"/>
+              <stop offset="100%" stop-color="#4a0011"/>
+            </radialGradient>
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <!-- Outer Gold Petals -->
+          <g filter="url(#glow)">
+            <path d="M100,20 Q110,50 100,60 Q90,50 100,20" fill="url(#gemGold)"/>
+            <path d="M100,180 Q110,150 100,140 Q90,150 100,180" fill="url(#gemGold)"/>
+            <path d="M20,100 Q50,110 60,100 Q50,90 20,100" fill="url(#gemGold)"/>
+            <path d="M180,100 Q150,110 140,100 Q150,90 180,100" fill="url(#gemGold)"/>
+            <path d="M43,43 Q65,65 72,72 Q50,78 43,43" fill="url(#gemGold)"/>
+            <path d="M157,43 Q135,65 128,72 Q150,78 157,43" fill="url(#gemGold)"/>
+            <path d="M43,157 Q65,135 72,128 Q50,122 43,157" fill="url(#gemGold)"/>
+            <path d="M157,157 Q135,135 128,128 Q150,122 157,157" fill="url(#gemGold)"/>
+          </g>
+
+          <!-- Middle Pattern Rings -->
+          <circle cx="100" cy="100" r="54" fill="none" stroke="#ffe082" stroke-width="4" stroke-dasharray="6,4"/>
+          <circle cx="100" cy="100" r="48" fill="#8e0e29" stroke="#f6c860" stroke-width="3"/>
+          <circle cx="100" cy="100" r="40" fill="none" stroke="#ffd54f" stroke-width="2" stroke-dasharray="3,3"/>
+          
+          <!-- Center Lotus & Holy Om -->
+          <circle cx="100" cy="100" r="32" fill="url(#gemGold)"/>
+          <circle cx="100" cy="100" r="24" fill="url(#rubyCenter)" stroke="#fff" stroke-width="1.5"/>
+          <circle cx="95" cy="94" r="5" fill="#ffffff" opacity="0.8"/>
+          <circle cx="100" cy="100" r="12" fill="none" stroke="#fff8e1" stroke-width="1.2"/>
+          <text x="100" y="105" font-family="'Rozha One', serif" font-size="14" fill="#fff9c4" text-anchor="middle" font-weight="bold">ॐ</text>
+        </svg>
+      </div>
+    </div>
+
+    <p style="font-size: 0.95rem; color: #ffe694; margin-bottom: 20px;">
+      राखी पर कर्सर या उंगली घुमाकर इसे 3D में देखें ✨
+    </p>
+
+    <div class="rakhi-actions">
+      <button class="btn-festive" onclick="tieRakhiAction()">
+        🎗️ राखी बांधें (Tie Rakhi)
+      </button>
+      <button class="btn-outline" onclick="applyTilakAction()">
+        🔴 तिलक लगाएं (Apply Tilak)
+      </button>
+      <button class="btn-outline" onclick="offerSweetsAction()">
+        🍬 मिठाई खिलाएं (Offer Sweets)
+      </button>
+    </div>
+  </div>
+
+  <!-- Dedicated Family Cards -->
+  <h2 class="section-title">रिश्तों की अनमोल मिठास</h2>
+  <div class="family-grid">
+    
+    <!-- Shubham Card -->
+    <div class="family-card">
+      <div class="family-avatar">👑</div>
+      <h3 class="family-name">शुभम भाई</h3>
+      <div class="family-role">प्यारे भाई व रक्षक</div>
+      <p class="family-quote">"हर कदम पर संबल बनकर खड़े रहने वाले, प्यार और मस्ती के सबसे बड़े साथी!"</p>
+      <button class="btn-outline" style="width: 100%;" onclick="sendShubhamBlessing()">
+        🌟 शुभम भाई को शुभकामनाएं
+      </button>
+    </div>
+
+    <!-- Aastha Card -->
+    <div class="family-card">
+      <div class="family-avatar">🌸</div>
+      <h3 class="family-name">आस्था</h3>
+      <div class="family-role">प्यारी बहन व घर की रौनक</div>
+      <p class="family-quote">"जिसकी मुस्कान से आंगन खिल उठे, वो मीठी तकरार और अटूट प्यार का प्रतीक!"</p>
+      <button class="btn-outline" style="width: 100%;" onclick="sendAasthaBlessing()">
+        💖 आस्था को दुलार व गिफ्ट
+      </button>
+    </div>
+
+    <!-- Nikita Card -->
+    <div class="family-card">
+      <div class="family-avatar">✨</div>
+      <h3 class="family-name">निकिता</h3>
+      <div class="family-role">स्नेहमयी व अर्धांगिनी</div>
+      <p class="family-quote">"रिश्तों को सहेजने वाली, परिवार की खुशियों और आदर का सुंदर आधार!"</p>
+      <button class="btn-outline" style="width: 100%;" onclick="sendNikitaBlessing()">
+        🌺 निकिता को सादर शुभकामनाएं
+      </button>
+    </div>
+
+    <!-- Mishra Pariwar Card -->
+    <div class="family-card">
+      <div class="family-avatar">🏛️</div>
+      <h3 class="family-name">मिश्रा परिवार</h3>
+      <div class="family-role">संस्कार, स्नेह और एकता</div>
+      <p class="family-quote">"जहाँ हर उत्सव में अपनापन हो, और हर दिल में एक-दूसरे के लिए अथाह प्यार!"</p>
+      <button class="btn-festive" style="width: 100%;" onclick="sendPariwarBlessing()">
+        🪔 पूरे परिवार का आशीर्वाद लें
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Interactive Real Photo Gallery (Polaroid Flip Cards) -->
+  <h2 class="section-title">यादों का झरोखा (Mishra Pariwar Memories)</h2>
+  <div class="gallery-header-box">
+    <div class="gallery-counter">
+      खुली हुई तस्वीरें: <span id="opened-count" style="color:#ffca28; font-weight:800;">0</span> / 7
+    </div>
+    <button class="btn-festive" onclick="unlockAllPhotos()">
+      ✨ सभी तस्वीरें एक साथ खोलें
+    </button>
+  </div>
+
+  <div class="gallery-grid">
+    
+    <!-- Photo Card 1: Shubham -->
+    <div class="polaroid-card" onclick="flipCard(this)">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="secret-icon">👑</div>
+          <h4>याद १ : शुभम भाई</h4>
+          <p>स्पर्श करके तस्वीर देखें</p>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame" onclick="openModal(this.querySelector('img').src, event)">
+            <img src="WhatsApp Image 2026-08-28 at 3.33.39 PM (1).jpeg" data-orig="WhatsApp Image 2026-08-28 at 3.33.39 PM (1).jpeg" alt="शुभम भाई" onerror="handleImageLoadError(this)">
+          </div>
+          <div class="photo-caption">शुभम भाई का स्नेह</div>
+          <div class="photo-sub">सदा मुस्कुराते और साथ निभाते</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Card 2: Maa & Nikita / Aastha -->
+    <div class="polaroid-card" onclick="flipCard(this)">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="secret-icon">🌸</div>
+          <h4>याद २ : मां और बेटी</h4>
+          <p>स्पर्श करके तस्वीर देखें</p>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame" onclick="openModal(this.querySelector('img').src, event)">
+            <img src="WhatsApp Image 2026-08-28 at 3.33.39 PM.jpeg" data-orig="WhatsApp Image 2026-08-28 at 3.33.39 PM.jpeg" alt="मां और बेटी" onerror="handleImageLoadError(this)">
+          </div>
+          <div class="photo-caption">मां का पावन आशीर्वाद</div>
+          <div class="photo-sub">मिश्रा परिवार का लाड़-प्यार</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Card 3: Big Family Photo (समस्त परिवार) -->
+    <div class="polaroid-card" onclick="flipCard(this)">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="secret-icon">🏛️</div>
+          <h4>याद ३ : समस्त परिवार</h4>
+          <p>स्पर्श करके तस्वीर देखें</p>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame" onclick="openModal(this.querySelector('img').src, event)">
+            <!-- Primary path with multi-extension and URL-encoded fallbacks -->
+            <img src="WhatsApp Image 2026-08-28 at 3.33.38 PM (2).jpg" data-orig="WhatsApp Image 2026-08-28 at 3.33.38 PM (2).jpg" alt="समस्त मिश्रा परिवार" onerror="handleImageLoadError(this)">
+          </div>
+          <div class="photo-caption">समस्त मिश्रा परिवार की खुशियां</div>
+          <div class="photo-sub">एकता और उत्सव का पावन संगम</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Card 4: Sisters & Family -->
+    <div class="polaroid-card" onclick="flipCard(this)">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="secret-icon">💖</div>
+          <h4>याद ४ : बहनों का स्नेह</h4>
+          <p>स्पर्श करके तस्वीर देखें</p>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame" onclick="openModal(this.querySelector('img').src, event)">
+            <img src="WhatsApp Image 2026-08-28 at 3.33.37 PM (3).jpeg" data-orig="WhatsApp Image 2026-08-28 at 3.33.37 PM (3).jpeg" alt="बहनों का स्नेह" onerror="handleImageLoadError(this)">
+          </div>
+          <div class="photo-caption">रंग-बिरंगी खुशियां</div>
+          <div class="photo-sub">आस्था व बहनों का दुलार</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Card 5: B&W Sweet Moments -->
+    <div class="polaroid-card" onclick="flipCard(this)">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="secret-icon">✨</div>
+          <h4>याद ५ : अनमोल लम्हे</h4>
+          <p>स्पर्श करके तस्वीर देखें</p>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame" onclick="openModal(this.querySelector('img').src, event)">
+            <img src="WhatsApp Image 2026-08-28 at 3.33.37 PM (2).jpeg" data-orig="WhatsApp Image 2026-08-28 at 3.33.37 PM (2).jpeg" alt="अनमोल लम्हे" onerror="handleImageLoadError(this)">
+          </div>
+          <div class="photo-caption">हँसी-ठिठोली और मस्ती</div>
+          <div class="photo-sub">दिल के सबसे करीब यादें</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Card 6: Festive Smiles -->
+    <div class="polaroid-card" onclick="flipCard(this)">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="secret-icon">🪔</div>
+          <h4>याद ६ : घर की रौनक</h4>
+          <p>स्पर्श करके तस्वीर देखें</p>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame" onclick="openModal(this.querySelector('img').src, event)">
+            <img src="WhatsApp Image 2026-08-28 at 3.33.37 PM (1).jpeg" data-orig="WhatsApp Image 2026-08-28 at 3.33.37 PM (1).jpeg" alt="घर की रौनक" onerror="handleImageLoadError(this)">
+          </div>
+          <div class="photo-caption">सदा महकता आशियाना</div>
+          <div class="photo-sub">मिश्रा परिवार का अटूट बंधन</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Card 7: Traditional Yellow Dress -->
+    <div class="polaroid-card" onclick="flipCard(this)">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="secret-icon">🌼</div>
+          <h4>याद ७ : सावन की बहार</h4>
+          <p>स्पर्श करके तस्वीर देखें</p>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame" onclick="openModal(this.querySelector('img').src, event)">
+            <img src="WhatsApp Image 2026-08-28 at 3.33.34 PM (1).jpeg" data-orig="WhatsApp Image 2026-08-28 at 3.33.34 PM (1).jpeg" alt="सावन की बहार" onerror="handleImageLoadError(this)">
+          </div>
+          <div class="photo-caption">उजाला और सकारात्मकता</div>
+          <div class="photo-sub">त्योहार की सुंदर छटा</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Dynamic Shayari / Blessing Machine -->
+  <div class="blessing-box">
+    <div style="font-size: 34px; margin-bottom: 8px;">📜</div>
+    <h3 style="font-family:'Rozha One', serif; color:#ffd54f; font-size: 1.55rem;">आशीर्वाद व पावन पंक्तियाँ</h3>
+    <div class="shayari-text" id="shayariDisplay">
+      "कच्चे धागों से बनी पक्की डोर है राखी,<br>प्यार और मीठी शरारतों की होड़ है राखी!"
+    </div>
+    <button class="btn-festive" onclick="generateNewShayari()">
+      🎲 नई मंगलकामना पढ़ें (New Blessing)
+    </button>
+  </div>
+
+  <!-- Signature Card -->
+  <div class="signature-card">
+    <div class="diyas-row">
+      <div>
+        <div class="diya-flame"></div>
+        <div class="diya-base"></div>
+      </div>
+      <div>
+        <div class="diya-flame"></div>
+        <div class="diya-base"></div>
+      </div>
+      <div>
+        <div class="diya-flame"></div>
+        <div class="diya-base"></div>
+      </div>
+    </div>
+    
+    <div class="family-crest">MISHRA PARIWAR</div>
+    <p style="color: #ffd875; font-size: 1.15rem; font-weight: 600; margin-top: 5px;">
+      शुभम • आस्था • निकिता एवं समस्त मिश्रा परिवार
+    </p>
+    <p style="color: #dfb04d; font-size: 0.88rem; margin-top: 10px;">
+      ईश्वर से प्रार्थना है कि आपके जीवन में सदैव सुख, शांति और समृद्धि की वर्षा हो। 🌸🙏
+    </p>
+  </div>
+
+</div>
+
+<!-- Interactive Toast -->
+<div id="toast">संदेश यहाँ आएगा!</div>
+
+<script>
+  // Robust image fallback resolver for local WhatsApp filenames
+  function handleImageLoadError(img) {
+    const orig = img.getAttribute('data-orig') || img.src;
+    const attempt = parseInt(img.dataset.attempt || "0", 10);
+
+    if (attempt === 0) {
+      img.dataset.attempt = "1";
+      // Try URL-encoded filename (handles spaces and parentheses like %20, %28, %29)
+      const parts = orig.split('/');
+      const fileName = parts[parts.length - 1];
+      img.src = encodeURIComponent(fileName);
+    } else if (attempt === 1) {
+      img.dataset.attempt = "2";
+      // Try swapping extension between .jpg and .jpeg
+      if (orig.toLowerCase().endsWith('.jpg')) {
+        img.src = orig.replace(/\.jpg$/i, '.jpeg');
+      } else if (orig.toLowerCase().endsWith('.jpeg')) {
+        img.src = orig.replace(/\.jpeg$/i, '.jpg');
+      } else {
+        img.src = orig + '.jpg';
+      }
+    } else if (attempt === 2) {
+      img.dataset.attempt = "3";
+      // Try encoded swapped extension
+      const baseName = orig.replace(/\.jpe?g$/i, '');
+      img.src = encodeURIComponent(baseName + '.jpeg');
+    } else {
+      // Graceful high-res fallback
+      img.onerror = null;
+      img.src = 'https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&w=600&q=80';
+    }
+  }
+
+  // Sparkle Background
+  const canvas = document.getElementById('sparkle-canvas');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  for(let i = 0; i < 45; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 2 + 0.8,
+      speed: Math.random() * 0.4 + 0.2,
+      opacity: Math.random()
+    });
+  }
+
+  function drawSparkles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(star => {
+      ctx.fillStyle = `rgba(255, 217, 120, ${star.opacity})`;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+      ctx.fill();
+      star.y -= star.speed;
+      star.opacity += (Math.random() - 0.5) * 0.05;
+      if(star.opacity < 0.1) star.opacity = 0.2;
+      if(star.opacity > 0.9) star.opacity = 0.8;
+      if(star.y < 0) {
+        star.y = canvas.height;
+        star.x = Math.random() * canvas.width;
+      }
+    });
+    requestAnimationFrame(drawSparkles);
+  }
+  drawSparkles();
+
+  // Toast
+  function showToast(text) {
+    const toast = document.getElementById('toast');
+    toast.innerText = text;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2800);
+  }
+
+  // Envelope Open
+  function openEnvelope() {
+    const letter = document.getElementById('letter-content');
+    const wrapper = document.getElementById('envelope-wrapper');
+    wrapper.style.display = 'none';
+    letter.style.display = 'block';
+    
+    playSynthNote(523.25, 0.4);
+    setTimeout(() => playSynthNote(659.25, 0.5), 200);
+    setTimeout(() => playSynthNote(783.99, 0.6), 400);
+    
+    confetti({
+      particleCount: 80,
+      spread: 70,
+      origin: { y: 0.5 }
+    });
+    showToast("✨ शुभकामना पत्र खुल गया!");
+  }
+
+  function celebrateBurst() {
+    playSynthChime();
+    confetti({
+      particleCount: 130,
+      spread: 100,
+      origin: { y: 0.6 },
+      colors: ['#ffd700', '#ff1744', '#ff9100', '#ffffff', '#e040fb']
+    });
+    showToast("🎉 रक्षाबंधन की हार्दिक शुभकामनाएं!");
+  }
+
+  // 3D Rakhi Mouse Movement
+  function handle3dMove(e) {
+    const card = document.getElementById('rakhiPiece');
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    card.style.animation = 'none';
+    card.style.transform = `rotateY(${x * 0.15}deg) rotateX(${-y * 0.15}deg) scale(1.08)`;
+  }
+  function reset3dCard() {
+    const card = document.getElementById('rakhiPiece');
+    card.style.transform = `rotateY(0deg) rotateX(0deg) scale(1)`;
+    card.style.animation = 'gentleSway 6s ease-in-out infinite';
+  }
+
+  // Rakhi Actions
+  function tieRakhiAction() {
+    const card = document.getElementById('rakhiPiece');
+    card.style.transform = "scale(1.25) rotate(15deg)";
+    playSynthChime();
+    confetti({
+      particleCount: 90,
+      spread: 60,
+      origin: { y: 0.55 },
+      colors: ['#ffeb3b', '#ff1744', '#ff9800']
+    });
+    setTimeout(() => {
+      card.style.transform = "scale(1)";
+    }, 600);
+    showToast("🎗️ पावन रक्षा सूत्र बंध गया! स्नेह और रक्षा का संकल्प!");
+  }
+
+  function applyTilakAction() {
+    playSynthNote(659.25, 0.3);
+    showToast("🔴 रोली-अक्षत का विजय तिलक लग गया! सदा विजयी भव!");
+  }
+
+  function offerSweetsAction() {
+    playSynthNote(783.99, 0.4);
+    confetti({
+      particleCount: 40,
+      spread: 40,
+      origin: { y: 0.6 }
+    });
+    showToast("🍬 मुँह मीठा हुआ! रिश्तों में घुली अनमोल मिठास!");
+  }
+
+  // Family Member Buttons
+  function sendShubhamBlessing() {
+    playSynthChime();
+    confetti({ particleCount: 75, spread: 60, origin: { y: 0.7 } });
+    showToast("👑 शुभम भाई के लिए लंबी उम्र, तरक्की और खुशियों की दुआ!");
+  }
+
+  function sendAasthaBlessing() {
+    playSynthChime();
+    confetti({ particleCount: 75, spread: 60, origin: { y: 0.7 }, colors: ['#ff4081', '#ffd700'] });
+    showToast("🌸 आस्था के लिए ढेर सारा स्नेह, खिलखिलाहट और खुशियां!");
+  }
+
+  function sendNikitaBlessing() {
+    playSynthChime();
+    confetti({ particleCount: 75, spread: 60, origin: { y: 0.7 }, colors: ['#e040fb', '#ffd700'] });
+    showToast("🌺 निकिता को ढेर सारा आदर, प्रेम और मंगलकामनाएं!");
+  }
+
+  function sendPariwarBlessing() {
+    playSynthChime();
+    confetti({ particleCount: 150, spread: 120, origin: { y: 0.6 } });
+    showToast("🪔 मिश्रा परिवार की एकता और सुख-समृद्धि सदैव बनी रहे!");
+  }
+
+  // Polaroid Flip Cards
+  function flipCard(card) {
+    card.classList.toggle('flipped');
+    updateCounter();
+  }
+
+  function updateCounter() {
+    const flippedCount = document.querySelectorAll('.polaroid-card.flipped').length;
+    document.getElementById('opened-count').innerText = flippedCount;
+    if(flippedCount === 7) {
+      celebrateBurst();
+    }
+  }
+
+  function unlockAllPhotos() {
+    const cards = document.querySelectorAll('.polaroid-card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('flipped');
+        updateCounter();
+      }, index * 120);
+    });
+    setTimeout(() => {
+      celebrateBurst();
+      showToast("🌟 सभी अनमोल यादें खुल गईं!");
+    }, 950);
+  }
+
+  // Modal Fullscreen Preview
+  function openModal(src, e) {
+    e.stopPropagation();
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    modalImg.src = src;
+    modal.style.display = 'flex';
+  }
+  function closeModal() {
+    document.getElementById('image-modal').style.display = 'none';
+  }
+
+  // Shayaris
+  const shayaris = [
+    "कच्चे धागों से बनी पक्की डोर है राखी,<br>प्यार और मीठी शरारतों की होड़ है राखी! 🌸",
+    "रेशम के धागों में समाया है अपार प्यार,<br>मुबारक हो शुभम, आस्था, निकिता व मिश्रा परिवार को यह त्योहार! ✨",
+    "सूरज की किरणें, खुशियों की बहार,<br>चंदन की खुशबू, अपनों का प्यार! शुभ रक्षाबंधन! 🪔",
+    "भाई की कलाई पर सजी है बहन की दुआ,<br>जीवन का हर लम्हा खुशियों से महक उठा! 💖",
+    "रिश्तों की बगिया सदा हरी-भरी रहे,<br>हमारे परिवार में प्यार की गंगा सदा बहे! 🌼"
+  ];
+  let currentShayari = 0;
+
+  function generateNewShayari() {
+    currentShayari = (currentShayari + 1) % shayaris.length;
+    const disp = document.getElementById('shayariDisplay');
+    disp.style.opacity = 0;
+    setTimeout(() => {
+      disp.innerHTML = `"${shayaris[currentShayari]}"`;
+      disp.style.opacity = 1;
+    }, 250);
+    playSynthNote(587.33, 0.2);
+  }
+
+  // Web Audio Synthesizer
+  let audioCtx = null;
+  let isPlayingFestiveTune = false;
+  let tuneInterval = null;
+
+  function initAudio() {
+    if(!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+  }
+
+  function playSynthNote(freq, duration) {
+    try {
+      initAudio();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+      gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    } catch(e) {}
+  }
+
+  function playSynthChime() {
+    const notes = [523.25, 659.25, 783.99, 1046.50];
+    notes.forEach((n, i) => {
+      setTimeout(() => playSynthNote(n, 0.4), i * 90);
+    });
+  }
+
+  function toggleFestivalMusic() {
+    initAudio();
+    const btnText = document.getElementById('music-text');
+    if(!isPlayingFestiveTune) {
+      isPlayingFestiveTune = true;
+      btnText.innerText = "धुन चालू 🎶";
+      showToast("🎵 पावन उत्सव धुन शुरू हो गई!");
+      
+      const ragaNotes = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25];
+      let step = 0;
+      tuneInterval = setInterval(() => {
+        playSynthNote(ragaNotes[step % ragaNotes.length], 0.35);
+        step++;
+      }, 350);
+    } else {
+      isPlayingFestiveTune = false;
+      clearInterval(tuneInterval);
+      btnText.innerText = "उत्सव धुन";
+      showToast("🔇 धुन बंद की गई");
+    }
+  }
+</script>
+</body>
+</html>
