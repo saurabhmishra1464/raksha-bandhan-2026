@@ -89,6 +89,35 @@
     box-shadow: 0 6px 28px rgba(246, 200, 96, 0.65);
   }
 
+   /* ------------------- SPECIAL SURPRISE VIDEO SECTION ------------------- */
+  .surprise-box {
+    background: radial-gradient(circle at center, rgba(105, 5, 27, 0.85), rgba(25, 1, 6, 0.95));
+    border: 2.5px solid #f6c860;
+    border-radius: 28px;
+    padding: 35px 25px;
+    text-align: center;
+    margin: 45px 0;
+    box-shadow: 0 20px 55px rgba(0,0,0,0.7), inset 0 0 30px rgba(246, 200, 96, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  .video-container {
+    max-width: 420px;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid #f6c860;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    background: #000;
+  }
+  .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 520px;
+    object-fit: cover;
+  }
+
   .container {
     max-width: 1080px;
     margin: 0 auto;
@@ -729,6 +758,23 @@
     <div style="text-align: center;">
       <button class="btn-festive" onclick="celebrateBurst()">🎊 खुशियों की वर्षा करें (Celebrate)</button>
     </div>
+  </div>
+
+    <div class="surprise-box">
+    <div style="font-size: 36px; margin-bottom: 10px;">🎥</div>
+    <h2 style="font-family: 'Rozha One', serif; color: #ffd54f; font-size: 1.8rem; margin-bottom: 8px;">विशेष रक्षाबंधन सरप्राइज वीडियो</h2>
+    <p style="color: #fce8a6; font-size: 0.95rem; margin-bottom: 20px;">आस्था और शुभम जी के पावन पलों का यह प्यारा वीडियो देखें 💖</p>
+    
+    <div class="video-container">
+      <video controls autoplay muted loop playsinline>
+        <source src="Recording 2026-08-28 182652.mp4" type="video/mp4">
+        आपका ब्राउज़र वीडियो टैग का समर्थन नहीं करता है।
+      </video>
+    </div>
+    
+    <button class="btn-festive" style="margin-top: 15px;" onclick="celebrateBurst()">
+      💖 वीडियो पर प्यार बरसाएं
+    </button>
   </div>
 
   <!-- 3D Interactive Rakhi Showcase -->
